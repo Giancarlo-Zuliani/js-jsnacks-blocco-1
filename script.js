@@ -95,7 +95,7 @@ var newArray = [];
 var from = parseInt(prompt('insersci un numero'));
 var to = parseInt(prompt('insersci un numero'));
 
-for(i=(from-1) ; i <(to);i++){
+for(i=(from-1) ; i < to ;i++){
   newArray.push(myArray[i])
 };
 
