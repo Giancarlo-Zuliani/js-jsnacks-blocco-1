@@ -121,7 +121,10 @@ var newObjArray=[];
 
 for(i=0;i<arrayObj.length;i++){
   newObjArray.push(arrayObj[i]);
-  newObjArray[i].position = generateRandomChar();
 };
+
+for(i=0;i<newObjArray;i++){
+  newObjArray[i].position = generateRandomChar();
+}
 
 console.log(newObjArray);
