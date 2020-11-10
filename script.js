@@ -108,7 +108,7 @@ var arrayObj = [
   {name: 'Poppy', type: 'tshirt', color: 'red'},
   {name: 'Jumping', type: 'occhiali', color: 'blue'},
   {name: 'CrissCross', type: 'scarpe', color: 'black'},
-  {name: 'Jenny', type: 'borsa', color: 'pink'},
+  {name: 'Jenny', type: 'borsa', color: 'pink'}
 ];
 
 function generateRandomChar(){
@@ -119,12 +119,14 @@ function generateRandomChar(){
 
 var newObjArray=[];
 
-for(i=0;i<arrayObj.length;i++){
-  newObjArray.push(arrayObj[i]);
-};
-
-for(i=0;i<newObjArray;i++){
-  newObjArray[i].position = generateRandomChar();
+for(i = 0 ; i < arrayObj.length; i++){
+  var obj = {}
+  for(key in arrayObj[i]){
+    console.log(key);
+    obj[key] = arrayObj[i][key];
+  }
+  obj.position = generateRandomChar()
+  newObjArray.push(obj);
 }
 
 console.log(newObjArray);
